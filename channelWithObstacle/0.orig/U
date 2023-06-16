@@ -44,7 +44,7 @@ boundaryField
         inletValue      uniform (0 0 0);
     }
 
-    walls
+    ".*Wall"
     {
         type            noSlip;
     }

@@ -22,9 +22,9 @@ boundaryField
 {
     inlet
     {
-        type            timeVaryingMappedFixedValue;
-        setAverage      0;
-        offset          0;
+        type            turbulentIntensityKineticEnergyInlet;
+        intensity       0.05;
+        value           uniform 0.375;
     }
 
     outlet
@@ -32,7 +32,7 @@ boundaryField
         type            zeroGradient;
     }
 
-    walls
+    ".*Wall"
     {
         type            kqRWallFunction;
         value           uniform 0.375;

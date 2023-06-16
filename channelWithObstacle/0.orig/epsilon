@@ -22,9 +22,9 @@ boundaryField
 {
     inlet
     {
-        type            timeVaryingMappedFixedValue;
-        setAverage      0;
-        offset          0;
+        type            turbulentMixingLengthDissipationRateInlet;
+        mixingLength    0.01;
+        value           uniform 14.855;
     }
 
     outlet
@@ -32,7 +32,7 @@ boundaryField
         type            zeroGradient;
     }
 
-    walls
+    ".*Wall"
     {
         type            epsilonWallFunction;
         value           uniform 14.855;
